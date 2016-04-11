@@ -10,7 +10,7 @@ spec:
   selector:
     component: elk
     role: kibana
-  type: NodePort
+  type: LoadBalancer
   ports:
   - name: http
     port: 80

@@ -12,6 +12,6 @@ spec:
     role: logstash
   type: NodePort
   ports:
-  - name: lumberjack
-    port: 5043
+  - name: beats
+    port: 5044
     protocol: TCP

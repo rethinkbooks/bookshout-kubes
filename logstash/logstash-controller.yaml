@@ -19,18 +19,9 @@ spec:
     spec:
       containers:
       - name: logstash
-        image: pires/logstash
+        image: quay.io/bookshout/logstash-beats:master
+        imagePullPolicy: Always
         ports:
-        - containerPort: 5043
-          name: lumberjack
+        - containerPort: 5044
+          name: beats
           protocol: TCP
-        volumeMounts:
-        - mountPath: /certs
-          name: certs
-      volumes:
-      - emptyDir:
-          medium: ""
-        name: "storage"
-      - hostPath:
-          path: "/tmp"
-        name: "certs"

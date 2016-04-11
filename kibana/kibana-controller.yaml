@@ -17,9 +17,10 @@ spec:
         component: elk
         role: kibana
     spec:
+      serviceAccount: elk
       containers:
       - name: kibana
-        image: kibana:4.1.1
+        image: kibana:4.4
         env:
         - name: ELASTICSEARCH_URL
           value: "http://elasticsearch:9200"
